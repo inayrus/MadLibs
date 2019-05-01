@@ -33,7 +33,7 @@ public class Story implements Serializable {
         text = "";
         placeholders = new ArrayList<String>();
         filledIn = 0;
-        htmlMode = false;
+        htmlMode = true;
         clear();
     }
 
@@ -75,6 +75,11 @@ public class Story implements Serializable {
     /** returns how many placeholders still need to be filled in */
     public int getPlaceholderRemainingCount() {
         return placeholders.size() - filledIn;
+    }
+
+    /** returns how many placeholders have been filled in */
+    public int getPlaceholderFilledIn() {
+        return filledIn;
     }
 
     /** returns true if all placeholders have been filled in */
