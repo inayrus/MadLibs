@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
             // get the name of the chosen story
             RadioButton chosenButton = findViewById(chosenButtonId);
-            String storyName = chosenButton.getText().toString();
+            String filename = (String) chosenButton.getTag();
 
             // get the id of the story's txt file
-            int resID = getResources().getIdentifier("madlib_" + storyName,"raw", getPackageName());
+            int resID = getResources().getIdentifier(filename,"raw", getPackageName());
 
             // initialize a the chosen story
             InputStream stream = getResources().openRawResource(resID);

@@ -58,7 +58,6 @@ public class ReadActivity extends AppCompatActivity {
     }
 
     public void restartClicked(View v) {
-        // empty the story object?????
 
         // send user to first activity
         Intent intent = new Intent(ReadActivity.this, MainActivity.class);
